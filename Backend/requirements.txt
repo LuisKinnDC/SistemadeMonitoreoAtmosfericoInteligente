@@ -1,0 +1,24 @@
+# ==========================================================
+#  Sistema de Monitoreo Atmosférico Inteligente
+#  Dependencias del backend (las 3 capas)
+# ==========================================================
+# Instalar con:  pip install -r requirements.txt
+#
+# Recomendado usar un entorno virtual:
+#   python -m venv .venv
+#   .venv\Scripts\activate        (Windows PowerShell)
+#   pip install -r requirements.txt
+# ----------------------------------------------------------
+
+# --- Capa 1: Ingesta y limpieza ---
+supabase>=2.4.0          # Cliente oficial de Supabase (supabase-py)
+pandas>=2.0.0            # Limpieza y manipulación de datos
+pyarrow>=14.0.0          # Motor Parquet (formato que consume PySpark)
+python-dotenv>=1.0.0     # Carga de variables de entorno desde .env
+
+# --- Capa 2: Procesamiento y análisis ---
+pyspark>=3.5.0           # Motor de procesamiento (batch + Structured Streaming)
+
+# --- Capa 3: Dashboard ---
+# El dashboard es una app React (carpeta frontend/, se instala con pnpm).
+# No requiere dependencias Python. Ver frontend/README.md.

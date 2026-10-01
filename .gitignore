@@ -1,0 +1,50 @@
+# ==========================================================
+#  .gitignore raiz - Sistema de Monitoreo Atmosferico
+#  Refuerza los .gitignore de Backend/ y frontend/.
+# ==========================================================
+
+# --- Credenciales: NUNCA subir ---
+.env
+.env.local
+.env.*.local
+*/.env
+*/.env.local
+
+# --- Entornos virtuales de Python ---
+.venv/
+venv/
+env/
+*/.venv/
+
+# --- Dependencias de Node ---
+node_modules/
+*/node_modules/
+.pnpm-store/
+
+# --- Data lake / resultados generados por el pipeline ---
+datos/
+*/datos/
+
+# --- Python ---
+__pycache__/
+*/__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# --- Spark ---
+spark-warehouse/
+metastore_db/
+derby.log
+
+# --- Build del frontend ---
+dist/
+dist-ssr/
+
+# --- Logs ---
+*.log
+
+# --- IDE / Sistema operativo ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
